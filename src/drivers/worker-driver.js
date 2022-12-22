@@ -1,6 +1,6 @@
 /* global performance */
 
-var webworkify = require('webworkify'),
+var webworkify = require('webworkify-webpack'),
     webworkifyDebug = require('./webworkify-debug'),
     Driver = require('./driver'),
     Event = require('./event'),

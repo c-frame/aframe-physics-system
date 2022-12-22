@@ -1,10 +1,9 @@
+var webpackConfiguration = require("../webpack.config.js");
+
 module.exports = function (config) {
   config.set({
     basePath: '../',
-    browserify: {
-      debug: true,
-      paths: ['src']
-    },
+    webpack: webpackConfiguration,
     browsers: ['Firefox', 'Chrome'],
     client: {
       captureConsole: true,
@@ -14,8 +13,8 @@ module.exports = function (config) {
     files: [
       {pattern: 'tests/**/*.test.js'}
     ],
-    frameworks: ['mocha', 'sinon-chai', 'chai-shallow-deep-equal', 'browserify'],
-    preprocessors: {'tests/**/*.js': ['browserify', 'env']},
+    frameworks: ['mocha', 'sinon-chai', 'chai-shallow-deep-equal', 'webpack'],
+    preprocessors: {'tests/**/*.js': ['webpack', 'env']},
     reporters: ['mocha']
   });
 };
