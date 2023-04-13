@@ -42,6 +42,12 @@ or
 <script src="http://kripken.github.io/ammo.js/builds/ammo.wasm.js"></script>
 ```
 
+Then, add `aframe-physics-system` itself, also with a script tag:
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.2/dist/aframe-physics-system.js"></script>
+```
+
 #### NPM and Webpack
 
 For more advanced projects that use npm and webpack, first `npm install` whichever version of ammo.js desired.
