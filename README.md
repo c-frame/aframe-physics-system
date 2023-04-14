@@ -9,7 +9,7 @@ A C-Frame fork, collectively maintained by the A-Frame community. Also see [the 
 -->
 Components for A-Frame physics integration.
 
-Supports [CANNON.js](http://schteppe.github.io/cannon.js/) and [Ammo.js](https://github.com/kripken/ammo.js/). See
+Supports [CANNON.js](https://schteppe.github.io/cannon.js/) and [Ammo.js](https://github.com/kripken/ammo.js/). See
 [examples](https://c-frame.github.io/aframe-physics-system/examples/).
 
 ## Contents

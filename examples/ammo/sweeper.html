@@ -4,7 +4,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,user-scalable=no,maximum-scale=1">
     <title>Examples • Sweeper AMMO</title>
-    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component@1.3.1/dist/aframe-environment-component.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/MozillaReality/ammo.js@8bbc0ea/builds/ammo.wasm.js"></script>
     <script src="../../dist/aframe-physics-system.js"></script>
@@ -25,7 +25,7 @@
     <a-scene environment
              rain-of-entities="components: height|0.2, width|0.2, depth|0.2, ammo-body, ammo-shape, force-pushable, color|#39BB82; spread: 3"
              physics="driver:ammo; stats: panel">
-      <!-- worker version (sweeper not working): 
+      <!-- worker version (sweeper not working):
            physics="driver: worker; workerFps: 60; workerInterpolate: true; workerInterpBufferSize: 2;"-->
       <!-- Player -->
       <a-entity camera wasd-controls look-controls position="0 0.6 0">
@@ -34,10 +34,10 @@
                   geometry="primitive: circle; radius: 0.01; segments: 4;"
                   material="color: #FF4444; shader: flat"></a-entity>
       </a-entity>
-      <a-entity id="left-hand" ammo-body="type: kinematic; emitCollisionEvents: true" ammo-shape="type: sphere; fit: manual; sphereRadius: 0.02;" 
+      <a-entity id="left-hand" ammo-body="type: kinematic; emitCollisionEvents: true" ammo-shape="type: sphere; fit: manual; sphereRadius: 0.02;"
                 hand-controls="hand: left" grab></a-entity>
       <a-entity id="right-hand" ammo-body="type: kinematic; emitCollisionEvents: true" ammo-shape="type: sphere; fit: manual; sphereRadius: 0.02;"
-                hand-controls="hand: right" grab></a-entity>  
+                hand-controls="hand: right" grab></a-entity>
 
       <!-- Terrain -->
       <a-box width="75" height="0.1" depth="75" ammo-body="type: static" ammo-shape visible="false"></a-box>

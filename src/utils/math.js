@@ -4,7 +4,7 @@ module.exports.slerp = function ( a, b, t ) {
 
   var x = a[0], y = a[1], z = a[2], w = a[3];
 
-  // http://www.euclideanspace.com/maths/algebra/realNormedAlgebra/quaternions/slerp/
+  // https://www.euclideanspace.com/maths/algebra/realNormedAlgebra/quaternions/slerp/
 
   var cosHalfTheta = w * b[3] + x * b[0] + y * b[1] + z * b[2];
 

@@ -1,6 +1,6 @@
 # Cannon Driver
 
-[CANNON.js](http://schteppe.github.io/cannon.js/) is a native JavaScript physics library, which is one of the available choices of driver in aframe-physics-system
+[CANNON.js](https://schteppe.github.io/cannon.js/) is a native JavaScript physics library, which is one of the available choices of driver in aframe-physics-system
 
 This page describes how to use aframe-physics-system with the Cannon Driver
 
@@ -30,14 +30,14 @@ npm install --save @c-frame/aframe-physics-system
 require('aframe-physics-system');
 ```
 
-Once installed, you'll need to compile your JavaScript using something like [Browserify](http://browserify.org/) or [Webpack](http://webpack.github.io/). Example:
+Once installed, you'll need to compile your JavaScript using something like [Browserify](https://browserify.org/) or [Webpack](https://webpack.github.io/). Example:
 
 ```bash
 npm install -g browserify
 browserify my-app.js -o bundle.js
 ```
 
-`bundle.js` may then be included in your page. See [here](http://browserify.org/#middle-section) for a better introduction to Browserify.
+`bundle.js` may then be included in your page. See [here](https://browserify.org/#middle-section) for a better introduction to Browserify.
 
 #### npm + webpack
 
@@ -204,7 +204,7 @@ Example:
 
 ## Using the CANNON.js API
 
-For more advanced physics, use the CANNON.js API with custom JavaScript and A-Frame components. The [CANNON.js documentation](http://schteppe.github.io/cannon.js/docs/) and source code offer good resources for learning to work with physics in JavaScript.
+For more advanced physics, use the CANNON.js API with custom JavaScript and A-Frame components. The [CANNON.js documentation](https://schteppe.github.io/cannon.js/docs/) and source code offer good resources for learning to work with physics in JavaScript.
 
 In A-Frame, each entity's `CANNON.Body` instance is exposed on the `el.body` property. To apply a quick push to an object, you might do the following:
 
@@ -291,9 +291,9 @@ More advanced configuration, including specifying different collision behaviors 
 
 Resources:
 
-* [CANNON.World](http://schteppe.github.io/cannon.js/docs/classes/World.html)
+* [CANNON.World](https://schteppe.github.io/cannon.js/docs/classes/World.html)
 
-* [CANNON.ContactMaterial](http://schteppe.github.io/cannon.js/docs/classes/ContactMaterial.html)
+* [CANNON.ContactMaterial](https://schteppe.github.io/cannon.js/docs/classes/ContactMaterial.html)
 
 
 ## Statistics

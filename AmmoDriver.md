@@ -25,12 +25,12 @@ The Ammo.js driver provides many features and new functionality that the existin
 
 ## Installation
 
-Initial installation is the same as for Cannon.js. See: [Scripts](https://github.com/donmccurdy/aframe-physics-system/blob/master/README.md#installation), then see [Including the Ammo.js Build](#including-the-ammojs-build).
+Initial installation is the same as for Cannon.js. See: [Scripts](README.md#installation), then see [Including the Ammo.js Build](#including-the-ammojs-build).
 
 ### Including the Ammo.js build
 
 Ammo.js is not a dependency of this project. As a result, it must be included into your project manually. Recommended options are: [script tag](#script-tag) or [NPM and Webpack](#npm-and-webpack).
-The latest [WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly) build is available either via the [Ammo.js github](http://kripken.github.io/ammo.js/builds/ammo.wasm.js) (`http://kripken.github.io/ammo.js/builds/ammo.wasm.js`) or the [Mozilla Reality fork](https://cdn.jsdelivr.net/gh/MozillaReality/ammo.js@8bbc0ea/builds/ammo.wasm.js) (`https://cdn.jsdelivr.net/gh/MozillaReality/ammo.js@8bbc0ea/builds/ammo.wasm.js`) created by the [Mozilla Hubs](https://github.com/mozilla/hubs) team. The latter is especially optimized for use with the Ammo Driver and includes [some functionality](#hacd-and-vhacd) not yet available in the main repository.
+The latest [WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly) build is available either via the [Ammo.js github](https://kripken.github.io/ammo.js/builds/ammo.wasm.js) (`https://kripken.github.io/ammo.js/builds/ammo.wasm.js`) or the [Mozilla Reality fork](https://cdn.jsdelivr.net/gh/MozillaReality/ammo.js@8bbc0ea/builds/ammo.wasm.js) (`https://cdn.jsdelivr.net/gh/MozillaReality/ammo.js@8bbc0ea/builds/ammo.wasm.js`) created by the [Mozilla Hubs](https://github.com/mozilla/hubs) team. The latter is especially optimized for use with the Ammo Driver and includes [some functionality](#hacd-and-vhacd) not yet available in the main repository.
 
 #### Script Tag
 
@@ -39,7 +39,7 @@ This is the easiest way to include Ammo.js in your project and is recommended fo
 ```html
 <script src="https://cdn.jsdelivr.net/gh/MozillaReality/ammo.js@8bbc0ea/builds/ammo.wasm.js"></script>
 or
-<script src="http://kripken.github.io/ammo.js/builds/ammo.wasm.js"></script>
+<script src="https://kripken.github.io/ammo.js/builds/ammo.wasm.js"></script>
 ```
 
 Then, add `aframe-physics-system` itself, also with a script tag:
@@ -255,7 +255,7 @@ Any entity with an `ammo-body` component can also have 1 or more `ammo-shape` co
   - **Cone** (`cone`) – Requires `halfExtents` if using `fit: manual`. Use `cylinderAxis` to change which axis the point of the cone is aligned.
 - **Hull** (`hull`) – Wraps a model in a convex hull, like a shrink-wrap. Not quite as performant as primitives, but still very fast.
 - **Hull Approximate Convex Decomposition** (`hacd`) – This is an experimental feature that generates multiple convex hulls to approximate any convex or concave shape.
-- **Volumetric Hull Approximate Convex Decomposition** (`vhacd`) – Also experimental, this is `hacd` with a different algorithm. See: http://kmamou.blogspot.com/2014/11/v-hacd-v20-is-here.html for more information.
+- **Volumetric Hull Approximate Convex Decomposition** (`vhacd`) – Also experimental, this is `hacd` with a different algorithm. See: https://kmamou.blogspot.com/2014/11/v-hacd-v20-is-here.html for more information.
 - **Mesh** (`mesh`) – Creates a 1:1 concave collision shape with the triangles of the meshes of the entity. May only be used on `static` bodies. This is the least performant shape, however they can work very well for static environments if the following is observed:
   - Avoid using meshes with very high triangle density relative to size of convex objects (primitives and hulls) colliding with the mesh. E.g. avoid meshes where an object could collide with dozens or more triangles in a single spot.
   - Avoid very high poly meshes in general and use mesh decimation (simplification) if possible.
