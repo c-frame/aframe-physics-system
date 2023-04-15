@@ -26,7 +26,7 @@ window.CANNON = window.CANNON || CANNON;
 /**
  * CANNON.shape2mesh
  *
- * Source: https://schteppe.github.io/cannon.js/build/cannon.demo.js
+ * Source: http://schteppe.github.io/cannon.js/build/cannon.demo.js
  * Author: @schteppe
  */
 var CANNON = require('cannon-es');
@@ -83,7 +83,7 @@ CANNON.shape2mesh = function(body){
             break;
 
         case CANNON.Shape.types.CONVEXPOLYHEDRON:
-
+            
             // Add vertices
             var positions = []
             for (var i = 0; i < shape.vertices.length; i++) {
@@ -19021,7 +19021,7 @@ module.exports.slerp = function ( a, b, t ) {
 
   var x = a[0], y = a[1], z = a[2], w = a[3];
 
-  // https://www.euclideanspace.com/maths/algebra/realNormedAlgebra/quaternions/slerp/
+  // http://www.euclideanspace.com/maths/algebra/realNormedAlgebra/quaternions/slerp/
 
   var cosHalfTheta = w * b[3] + x * b[0] + y * b[1] + z * b[2];
 
