@@ -13929,6 +13929,7 @@ let AmmoBody = {
       const clamp = (num, min, max) => Math.min(Math.max(num, min), max)
 
       this.localScaling = new Ammo.btVector3();
+      this.scaleVector = new THREE.Vector3();
 
       const obj = this.el.object3D;
       obj.getWorldPosition(pos);
@@ -14014,8 +14015,9 @@ let AmmoBody = {
       let updated = false;
 
       const obj = this.el.object3D;
-      if (this.data.scaleAutoUpdate && this.prevScale && !almostEqualsVector3(0.001, obj.scale, this.prevScale)) {
-        this.prevScale.copy(obj.scale);
+      obj.getWorldScale(this.scaleVector);
+      if (this.data.scaleAutoUpdate && this.prevScale && !almostEqualsVector3(0.001, this.scaleVector, this.prevScale)) {
+        this.prevScale.copy(this.scaleVector);
         updated = true;
 
         this.localScaling.setValue(this.prevScale.x, this.prevScale.y, this.prevScale.z);
@@ -14233,8 +14235,9 @@ let AmmoBody = {
     const v2 = new THREE.Vector3();
     return function() {
       const el = this.el,
-        parentEl = el.parentEl,
-        body = this.body;
+        body = this.body, 
+        // see notes on parentEl in syncFromPhysics
+        parentEl = el.object3D.parent.el ? el.object3D.parent.el : el.parentEl;
 
       if (!body) return;
 
