@@ -45,7 +45,7 @@ or
 Then, add `aframe-physics-system` itself, also with a script tag:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.3/dist/aframe-physics-system.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.4/dist/aframe-physics-system.js"></script>
 ```
 
 #### NPM and Webpack

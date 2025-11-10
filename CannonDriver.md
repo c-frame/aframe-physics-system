@@ -11,13 +11,13 @@ This page describes how to use aframe-physics-system with the Cannon Driver
 In the [dist/](https://github.com/c-frame/aframe-physics-system/tree/master/dist) folder, download the full or minified build. Include the script on your page, and all components are automatically registered for you:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.3/dist/aframe-physics-system.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.4/dist/aframe-physics-system.min.js"></script>
 ```
 
 CDN builds for aframe-physics-system@v$npm_package_version:
 
-- [aframe-physics-system.js](https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.3/dist/aframe-physics-system.js) *(development)*
-- [aframe-physics-system.min.js](https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.3/dist/aframe-physics-system.min.js) *(production)*
+- [aframe-physics-system.js](https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.4/dist/aframe-physics-system.js) *(development)*
+- [aframe-physics-system.min.js](https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.4/dist/aframe-physics-system.min.js) *(production)*
 
 ### npm
 
