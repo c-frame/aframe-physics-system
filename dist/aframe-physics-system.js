@@ -12310,13 +12310,20 @@ const _finishCollisionShape = function (collisionShape, options, scale) {
   }
   collisionShape.localTransform = localTransform;
 };
+const isObjectVisible = object => {
+  if (!object.visible) return false;
+  if (object.parent) {
+    return isObjectVisible(object.parent);
+  }
+  return true;
+};
 const iterateGeometries = exports.iterateGeometries = function () {
   const inverse = new THREE.Matrix4();
   return function (root, options, cb) {
     inverse.copy(root.matrixWorld).invert();
     root.traverse(mesh => {
       const transform = new THREE.Matrix4();
-      if (mesh.isMesh && mesh.name !== "Sky" && (options.includeInvisible || mesh.el && mesh.el.object3D.visible || mesh.visible)) {
+      if (mesh.isMesh && mesh.name !== "Sky" && (options.includeInvisible || isObjectVisible(mesh))) {
         if (mesh === root) {
           transform.identity();
         } else {
