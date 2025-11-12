@@ -46,7 +46,7 @@
     "ammo-debug-drawer": "^0.1.0",
     "cannon-es": "^0.9.1",
     "patch-package": "^6.5.0",
-    "three-to-ammo": "npm:@c-frame/three-to-ammo@^1.0.4",
+    "three-to-ammo": "npm:@c-frame/three-to-ammo@^1.0.5",
     "three-to-cannon": "^4.0.0",
     "webworkify": "^1.4.0"
   },
